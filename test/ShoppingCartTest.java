@@ -13,20 +13,34 @@ public class ShoppingCartTest {
 				// 		the new balance must be the 
 				// 		sum of the previous balance plus 
 				// 		the cost of the new product  
-		/*
-		 *  1. Make a shopping car.
-		 * 	2. Make a product (x2).
-		 * 	3. Check Balance in cart before adding.
-		 * 	4. Check number in cart before adding.
-		 * 	5. Add the product to the cart.
-		 * 	6. Check number of items in cart
-		 * 		- Eo: Num items + 1
-		 * 
-		 * 	7. Check the balance of the cart
-		 * 		-Eo: Previous balance + Price of the product
-		 * 
-		 * 
-		 */
+		
+			 //	   1.  MAKE A SHOPPING CART!
+		
+		ShoppingCart cart = new ShoppingCart();
+		
+		
+			 //    2.  MAKE A PRODUCT
+		Product phone = new Product("iphone", 1500);
+		
+		
+			 //    3.  CHECK BALANCE IN CART BEFORE ADDING PRODUCT
+			 //    			- PREV BAL
+		double startBalance = cart.getBalance();
+		assertEquals(0,startBalance,0.01);
+		
+		
+			 //    4.  CHECK NUM ITEMS IN CART BEFORE ADDING PRODUCT
+			 //   		    - PREV NUM ITEMS
+		
+		int numItems = cart.getItemCount();
+		assertEquals(0,numItems);
+		
+			 //    5.  ADD THE PRODUCT TO THE CART 
+			 //    6.  CHECK THE UPDATED NUMBER OF ITEMS IN CART 
+			 //    		-- EO: NUM ITEMS + 1
+			 //    -----------------------
+			 //    7.  CHECK THE UPDATED BALANCE OF THE CART
+			 //   		-- EO: PREVIOUS BALANCE + PRICE OF PRODUCT
 		
 		
 		
