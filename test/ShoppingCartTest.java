@@ -32,16 +32,22 @@ public class ShoppingCartTest {
 			 //    4.  CHECK NUM ITEMS IN CART BEFORE ADDING PRODUCT
 			 //   		    - PREV NUM ITEMS
 		
-		int numItems = cart.getItemCount();
-		assertEquals(0,numItems);
+		int StartingNumItems = cart.getItemCount();
+		assertEquals(0,StartingNumItems);
 		
 			 //    5.  ADD THE PRODUCT TO THE CART 
+		cart.addItem(phone);
+		
 			 //    6.  CHECK THE UPDATED NUMBER OF ITEMS IN CART 
 			 //    		-- EO: NUM ITEMS + 1
+		assertEquals(StartingNumItems + 1, cart.getItemCount());
 			 //    -----------------------
 			 //    7.  CHECK THE UPDATED BALANCE OF THE CART
 			 //   		-- EO: PREVIOUS BALANCE + PRICE OF PRODUCT
 		
+		double expectedBalance = startBalance + phone.getPrice();
+		
+		assertEquals(expectedBalance,cart.getBalance(),0.01);
 		
 		
 		
