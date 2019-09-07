@@ -1,8 +1,20 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class ShoppingCartTest {
+	
+	ShoppingCart cart;
+	Product phone;
+	
+	@Before
+	public void setup() throws Exception{
+		cart = new ShoppingCart();
+		
+		phone = new Product("iphone", 1500);
+	}
+	
 	
 	@Test
 	public void testAddProductToCart() {
@@ -16,11 +28,11 @@ public class ShoppingCartTest {
 		
 			 //	   1.  MAKE A SHOPPING CART!
 		
-		ShoppingCart cart = new ShoppingCart();
+		//ShoppingCart cart = new ShoppingCart();
 		
 		
 			 //    2.  MAKE A PRODUCT
-		Product phone = new Product("iphone", 1500);
+		//Product phone = new Product("iphone", 1500);
 		
 		
 			 //    3.  CHECK BALANCE IN CART BEFORE ADDING PRODUCT
@@ -72,7 +84,7 @@ public class ShoppingCartTest {
 			// Test: When created, the cart has 0 items 
 
 			// 1. Make a new cart
-			ShoppingCart cart = new ShoppingCart();
+			//ShoppingCart cart = new ShoppingCart();
 			
 			// 2. check number of items in cart
 			int a = cart.getItemCount();
@@ -84,10 +96,12 @@ public class ShoppingCartTest {
 		@Test
 		public void testEmptyTheCart() {
 			// 1.Create a new cart
-			ShoppingCart cart = new ShoppingCart();
+			//ShoppingCart cart = new ShoppingCart();
+			
 			// 2. Add an item to the cart
-			Product phone = new Product("iphone", 1500);
+			//Product phone = new Product("iphone", 1500);
 			Product hamburger = new Product("burger", 10);
+			
 			cart.addItem(phone);
 			cart.addItem(hamburger);
 			
